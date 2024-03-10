@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadatak 02 Animacija</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 480px;
+            margin: auto;
+            background-color: #050210;
+        }
+
+        .box-1 {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            border-radius: 150px;
+            transform: translate(0px, 90px);
+            background: repeating-conic-gradient(#fb5dad, #55fb9f, #b97aff, #55fb9f, #fb5dad);
+            box-shadow: 0 0 20px #fb5dad, 0 0 40px #55fb9f, 0 0 60px #b97aff;
+        }
+
+        #rotate {
+            animation-name: my-animation; 
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes my-animation {
+            0% {
+                transform: translateY(100px) rotate(0deg);
+                width: 300px;
+                height: 300px;
+            }
+
+            100% {
+                transform: translateY(100px) rotate(360deg);
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        .box-2 {
+            width: 260px;
+            height: 260px;
+            border-radius: 130px;
+            transform: translate(170px, -180px);
+            background-color: #050210;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div id="rotate" class="box-1"></div>
+        <div class="box-2"></div>
+    </div>
+</body>
+</html>
